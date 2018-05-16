@@ -1,0 +1,36 @@
+{
+  "services": {
+    "platform": {
+      "fields": {
+        "customer": ["id", "name", "email", "notify"]
+      },
+      "name": "Platform",
+      "url": "/platform",
+      "schema": null
+    },
+    "gw": {
+      "fields": {
+        "devices": ["id", "name", "phone", "ident", "device_type_id", "telemetry", "messages_size", "messages_ttl", "blocked", "connected", "settings"]
+      },
+      "name": "Gateway",
+      "url": "/gw",
+      "schema": null
+    },
+    "storage": {
+      "fields": {
+        "cdns": ["id", "name", "size", "blocked"],
+        "files": ["uuid", "name", "size", "blocked", "mime", "expires", "created", "cdn_id", "auto_ttl"]
+      },
+      "name": "Storage",
+      "url": "/storage",
+      "schema": null
+    },
+    "auth": {
+      "name": "Auth api",
+      "url": "/auth",
+      "schema": null
+    }
+  },
+  "token": "",
+  "server": ""
+}
