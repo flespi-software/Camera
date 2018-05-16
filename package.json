@@ -1,0 +1,45 @@
+{
+  "name": "flespi-camera",
+  "version": "1.0.0",
+  "description": "flespi Camera is a camera mobile web app that uses flespi CDN as a storage for photos",
+  "productName": "flespi Camera",
+  "cordovaId": "io.flespi.camera",
+  "author": "Evgenij Spitsyn <evgeniy@spitsyn.net>",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.vue src",
+    "deploy": "quasar build -m pwa && rm -rf deploy && mkdir deploy && cp -R dist/pwa-mat/* misc CNAME LICENSE package.json deploy && cp README.md deploy/README.md && node_modules/git-directory-deploy/bin/git-directory-deploy.sh -ddeploy -bgh-pages -rhttps://github.com/flespi-software/Camera.git && rm -rf deploy",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "flespi-io-js": "git+https://github.com/flespi-software/flespi-io-js.git",
+    "quagga": "^0.12.1",
+    "vue-i18n": "^7.3.3",
+    "vue-resource": "^1.5.0",
+    "webrtc-adapter": "^6.1.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^4.4.0",
+    "git-directory-deploy": "^1.5.1",
+    "quasar-cli": "^0.15.14"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ]
+}
