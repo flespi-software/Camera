@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue src",
-    "deploy": "quasar build -m pwa && rm -rf deploy && mkdir deploy && cp -R dist/pwa-mat/* misc CNAME LICENSE package.json deploy && cp README.md deploy/README.md && node_modules/git-directory-deploy/bin/git-directory-deploy.sh -ddeploy -bgh-pages -rhttps://github.com/flespi-software/Camera.git && rm -rf deploy",
+    "deploy": "quasar build -m pwa && rm -rf deploy && mkdir deploy && cp -R dist/pwa-mat/* misc LICENSE package.json deploy && cp README.md deploy/README.md && node_modules/git-directory-deploy/bin/git-directory-deploy.sh -ddeploy -bgh-pages -rhttps://github.com/flespi-software/Camera.git && rm -rf deploy",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
